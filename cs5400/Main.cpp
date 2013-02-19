@@ -255,9 +255,9 @@ reshape( int width, int height )
 int main(int argv, char **argc)
 {
 	std::vector<std::string> fileNames;
-	fileNames.push_back("bun_zipper.ply");
-	fileNames.push_back("dragon_vrip.ply");
-	fileNames.push_back("happy_vrip.ply");
+	fileNames.push_back("../../cs5400/bun_zipper.ply");
+	fileNames.push_back("../../cs5400/dragon_vrip.ply");
+	fileNames.push_back("../../cs5400/happy_vrip.ply");
 
 	for(int i = 0; i < fileNames.size(); i++)
 	{
@@ -285,8 +285,8 @@ int main(int argv, char **argc)
 	{  
     program = cs5400::make_program
       (
-	cs5400::make_vertexShader("vshader36.glsl")
-      ,cs5400::make_fragmentShader("fshader36.glsl")   
+	cs5400::make_vertexShader("../../cs5400/vshader36.glsl")
+      ,cs5400::make_fragmentShader("../../cs5400/fshader36.glsl")   
       );
 	init_resources();
     glutDisplayFunc(display);
