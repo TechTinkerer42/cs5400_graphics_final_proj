@@ -10,7 +10,6 @@
 		0ED2357916D4018A003E6570 /* cs5400.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0ED2357816D4018A003E6570 /* cs5400.1 */; };
 		0ED2370916D401D4003E6570 /* InitShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ED236FA16D401D4003E6570 /* InitShader.cpp */; };
 		0ED2370B16D401D4003E6570 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ED236FC16D401D4003E6570 /* Main.cpp */; };
-		0ED2370C16D401D4003E6570 /* PlyReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ED236FE16D401D4003E6570 /* PlyReader.cpp */; };
 		0ED2370D16D401D4003E6570 /* Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2370016D401D4003E6570 /* Program.cpp */; };
 		0ED2370E16D401D4003E6570 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2370216D401D4003E6570 /* Shader.cpp */; };
 		0ED2371016D401F1003E6570 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED2370F16D401F1003E6570 /* GLUT.framework */; };
@@ -46,8 +45,6 @@
 		0ED236FA16D401D4003E6570 /* InitShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InitShader.cpp; sourceTree = "<group>"; };
 		0ED236FC16D401D4003E6570 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		0ED236FD16D401D4003E6570 /* mat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mat.h; sourceTree = "<group>"; };
-		0ED236FE16D401D4003E6570 /* PlyReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlyReader.cpp; sourceTree = "<group>"; };
-		0ED236FF16D401D4003E6570 /* PlyReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PlyReader.hpp; sourceTree = "<group>"; };
 		0ED2370016D401D4003E6570 /* Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Program.cpp; sourceTree = "<group>"; };
 		0ED2370116D401D4003E6570 /* Program.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Program.hpp; sourceTree = "<group>"; };
 		0ED2370216D401D4003E6570 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
@@ -107,8 +104,6 @@
 				0ED236FA16D401D4003E6570 /* InitShader.cpp */,
 				0ED236FC16D401D4003E6570 /* Main.cpp */,
 				0ED236FD16D401D4003E6570 /* mat.h */,
-				0ED236FE16D401D4003E6570 /* PlyReader.cpp */,
-				0ED236FF16D401D4003E6570 /* PlyReader.hpp */,
 				0ED2370016D401D4003E6570 /* Program.cpp */,
 				0ED2370116D401D4003E6570 /* Program.hpp */,
 				0ED2370216D401D4003E6570 /* Shader.cpp */,
@@ -173,7 +168,6 @@
 			files = (
 				0ED2370916D401D4003E6570 /* InitShader.cpp in Sources */,
 				0ED2370B16D401D4003E6570 /* Main.cpp in Sources */,
-				0ED2370C16D401D4003E6570 /* PlyReader.cpp in Sources */,
 				0ED2370D16D401D4003E6570 /* Program.cpp in Sources */,
 				0ED2370E16D401D4003E6570 /* Shader.cpp in Sources */,
 			);

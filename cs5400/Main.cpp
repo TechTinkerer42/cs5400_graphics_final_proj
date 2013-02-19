@@ -14,6 +14,10 @@
     #endif  // __APPLE__
 #endif  // CS5400_FILE_PATH
 
+#define TRANSLATION_INCREMENT .01
+#define ROTAITON_INCREMENT 5
+#define SCALE_INCREMENT .1
+
 #include "Shader.hpp"
 #include "Program.hpp"
 
@@ -22,7 +26,7 @@
 
 
 GLfloat  fov = 60, aspect = 1;
-GLfloat  zNear = 0.1, zFar = 13.0;
+GLfloat  zNear = 0.1, zFar = 30.0;
 
 GLuint level = 0;
 
@@ -87,8 +91,8 @@ std::shared_ptr<cs5400::Program> program;
 enum { Xaxis = 0, Yaxis = 1, Zaxis = 2, NumAxes = 3 };
 int      Axis = Xaxis;
 GLfloat  Theta[NumAxes] = { 0.0, 0.0, 0.0 };
-vec4  Trans = vec4( 0.0, 0.0, 0.5, 1.0 );
-GLfloat  ScaleVal = 1.0;
+vec4  Trans = vec4( -0.05, 0.2, 0.5, 1.0 );
+GLfloat  ScaleVal = 2.0;
 
 GLuint  theta; 
 GLuint  trans;
@@ -97,6 +101,9 @@ GLuint  ModelView, Projection;
 GLfloat xCol = 0;
 GLfloat yCol = 0;
 GLfloat zCol = 0;
+
+GLfloat xSwing = 0;
+bool pause = false;
 
 point calcNormal(int p1, int p2, int p3, std::vector<point> &pointsObj, std::vector<point> &normalObj)
 {
@@ -133,82 +140,82 @@ void keyboard( unsigned char key, int x, int y )
 	case 033: // Escape Key
 //		glutExit();
 	case 'w': case 'W':
-		Theta[0] += 5.0;
+		Theta[0] += ROTAITON_INCREMENT;
 		if ( Theta[0] > 360 ) {
 		Theta[0] -= 0.5;
 		}
 		break;
 	case 'a': case 'A':
-		Theta[1] += 5.0;
+		Theta[1] += ROTAITON_INCREMENT;
 		if ( Theta[1] > 360 ) {
 		Theta[1] -= 0.5;
 		}
 		break;
 	case 's': case 'S':
-		Theta[0] -= 5.0;
+		Theta[0] -= ROTAITON_INCREMENT;
 		if ( Theta[0] < -360 ) {
 		Theta[0] -= 0.5;
 		}
 		break;
 	case 'd': case 'D':
-		Theta[1] -= 5.0;
+		Theta[1] -= ROTAITON_INCREMENT;
 		if ( Theta[1] < -360 ) {
 		Theta[1] -= 0.5;
 		}
 		break;
 	case 'q': case 'Q':
-		Theta[2] -= 5.0;
+		Theta[2] -= ROTAITON_INCREMENT;
 		if ( Theta[2] < -360 ) {
 		Theta[2] -= 0.5;
 		}
 		break;
 	case 'r': case 'R':
-		Theta[2] += 5.0;
+		Theta[2] += ROTAITON_INCREMENT;
 		if ( Theta[2] < 360 ) {
 		Theta[2] -= 0.5;
 		}
 		break;
 	case 'j': case 'J':
-		Trans[0] += 0.1;
+		Trans[0] += TRANSLATION_INCREMENT;
 		break;
 	case 'l': case 'L':
-		Trans[0] -= 0.1;
+		Trans[0] -= TRANSLATION_INCREMENT;
 		break;
 	case 'i' : case 'I':
-		Trans[1] -= 0.1;
+		Trans[1] -= TRANSLATION_INCREMENT;
 		break;
 	case 'k': case 'K':
-		Trans[1] += 0.1;
+		Trans[1] += TRANSLATION_INCREMENT;
 		break;
 	case 'z' : case 'Z':
-		Trans[2] -= 0.1;
+		Trans[2] -= TRANSLATION_INCREMENT;
 		break;
 	case 'x' : case 'X':
-		Trans[2] += 0.1;
+		Trans[2] += TRANSLATION_INCREMENT;
 		break;
 	case 'n': case 'N':
-		ScaleVal += 0.1;
+		ScaleVal += SCALE_INCREMENT;
 		break;
 	case 'm': case 'M':
-		ScaleVal -= 0.1;
+		ScaleVal -= SCALE_INCREMENT;
 		break;
-	/*case 'f':
-		xCol += .1;
+	case 'f':
+		xCol += TRANSLATION_INCREMENT*10;
 		break;
 	case 'F':
-		xCol -= .1;
-		break;*/
+		xCol -= TRANSLATION_INCREMENT*10;
+		break;
 	case 'g':
-		yCol += .1;
+		yCol += TRANSLATION_INCREMENT*10;
 		break;
 	case 'G':
-		yCol -= .1;
+		yCol -= TRANSLATION_INCREMENT*10;
 		break;
 	case 'h':
-		zCol += .1;
+		zCol += TRANSLATION_INCREMENT*10;
 		break;
 	case 'H':
-		zCol -= .1;
+		zCol -= TRANSLATION_INCREMENT*10;
 		break;
 	case '.':
 		if(level < totalModels - 1)
@@ -218,6 +225,9 @@ void keyboard( unsigned char key, int x, int y )
 		if(level > 0)
 		level--;
 		break;
+    case 'p':
+        pause = !pause;
+        break;
 		
 	}
 	 glutPostRedisplay();
@@ -227,37 +237,39 @@ GLboolean isNeg = false;
 
 void idle()
 {
-	if(!isNeg)
-	{
-		if(xCol > 6.0)
-		{
-			isNeg = true;
-		}
-		else
-			xCol += .1;
-	}
-	if(isNeg)
-	{
-		if(xCol > -6.0)
-			xCol -= .1;
-		else
-			isNeg = false;
-	}
-
-	glutPostRedisplay();
+    if(!pause)
+    {
+        if(!isNeg)
+        {
+            if(xSwing > 6.0)
+            {
+                isNeg = true;
+            }
+            else
+                xSwing += TRANSLATION_INCREMENT*10;
+        }
+        if(isNeg)
+        {
+            if(xSwing > -6.0)
+                xSwing -= TRANSLATION_INCREMENT*10;
+            else
+                isNeg = false;
+        }
+        glutPostRedisplay();
+    }
 }
 
 
-void
-reshape( int width, int height )
-{
-    glViewport( 0, 0, width, height );
-
-    GLfloat aspect = GLfloat(width)/height;
-    mat4  projection = Perspective( 45.0, aspect, 0.5, 0.6 );
-
-    glUniformMatrix4fv( Projection, 1, GL_TRUE, projection );
-}
+//void
+//reshape( int width, int height )
+//{
+//    glViewport( 0, 0, width, height );
+//
+//    GLfloat aspect = GLfloat(width)/height;
+//    mat4  projection = Perspective( 45.0, aspect, 0.5, 0.6 );
+//
+//    glUniformMatrix4fv( Projection, 1, GL_TRUE, projection );
+//}
 
 
 int main(int argv, char **argc)
@@ -278,7 +290,7 @@ int main(int argv, char **argc)
 
 	glutInit(&argv, argc);
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE);
-	glutInitWindowSize(640, 480);
+	glutInitWindowSize(1280, 960);
 	glutCreateWindow("Ply loading program");
 
 	GLenum glew_status = glewInit();
@@ -353,7 +365,7 @@ void init_resources()
 
 void lightingParams()
 {
-	vec4 light_position( 0.0 - xCol, 0.0 - yCol, -1.0 - zCol, 0.0 );
+	vec4 light_position( xCol + xSwing, yCol, 1 + zCol, 0.0 );
     vec4 light_ambient( 0.8, 1.0, 0.5, 1.0 );
     vec4 light_diffuse( 1.0, 1.0, 1.0, 1.0 );
     vec4 light_specular( 0.8, 0.2, 0.0, 1.0 );

@@ -49,5 +49,5 @@ void main()
 	
     color.a = 1.0;
     
-    gl_Position = ModelView  * vec4(vPosition, 1.0);
+    gl_Position = Projection * ModelView  * vec4(vPosition, 1.0);
 } 

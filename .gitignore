@@ -1,3 +1,3 @@
-/Intermediates*
-/DerivedData*
+/Intermediates/*
+/DerivedData/*
 .DS_Store
