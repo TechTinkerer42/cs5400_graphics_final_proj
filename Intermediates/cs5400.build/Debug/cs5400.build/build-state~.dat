@@ -1,180 +1,0 @@
-Tcs5400
-v5
-r1
-cCheck dependencies
-cCompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/InitShader.o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/InitShader.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Main.o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Main.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/PlyReader.o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/PlyReader.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Program.o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Program.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Shader.o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Shader.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cLd "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug/cs5400" normal x86_64
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/../../../../../System/Library/Frameworks/GLUT.framework/GLUT
-c000000004F2FA0560000000000105760
-t1328521302
-s1070944
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/../../../../../System/Library/Frameworks/OpenGL.framework/OpenGL
-c000000005051800B000000000002D360
-t1347518475
-s185184
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/../../../../../usr/local/lib/libGLEW.dylib
-c0000000050F746B30000000000051700
-t1358382771
-s333568
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/InitShader.o
-t2
-s0
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Main.o
-t2
-s0
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/PlyReader.o
-t2
-s0
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Program.o
-t2
-s0
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Shader.o
-t2
-s0
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/cs5400.LinkFileList
-c000000005123E66500000000000002B8
-t1361307237
-s696
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug/cs5400
-t2
-s0
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Angel.h
-c000000005123CB8300000000000008C2
-t1361300355
-s2242
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/InitShader.cpp
-c0000000050FC6E440000000000000958
-t1358720580
-s2392
-i"Angel.h"
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Main.cpp
-c000000005123D96D0000000000002BBB
-t1361303917
-s11195
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/PlyReader.cpp
-c000000005115CC510000000000000495
-t1360383057
-s1173
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Program.cpp
-c0000000050F76DC00000000000000268
-t1358392768
-s616
-
-N/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Shader.cpp
-c000000005123CBD00000000000000609
-t1361300432
-s1545
-
-CBuild AST from "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/InitShader.cpp"
-r0
-
-CBuild AST from "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Main.cpp"
-r0
-
-CBuild AST from "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/PlyReader.cpp"
-r0
-
-CBuild AST from "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Program.cpp"
-r0
-
-CBuild AST from "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Shader.cpp"
-r0
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesbb2a60e51dd4b641^a2cf77e51dd4b641^---0#1#0#--18"Check dependencies36"BA6AAABC-71A5-41B2-A8A8-4011806D05E0-
-
-CCompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/InitShader.o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/InitShader.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s383000037.473915
-e383000038.469405
-r1
-xCompileC
-xIntermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/InitShader.o
-x/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/InitShader.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/InitShader.cppc89679e51dd4b641^132a78e61dd4b641^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/jafarb/Google%20Drive/github/cs5400_graphics_final_proj/cs5400/InitShader.cpp0000000000000000^3001"CompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/InitShader.o cs5400/InitShader.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-generated-files.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-own-target-headers.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-all-target-headers.hmap" -iquote "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-project-headers.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/DerivedSources/x86_64" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/DerivedSources" "-F/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug" -MMD -MT dependencies -MF "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/InitShader.d" --serialize-diagnostics "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/InitShader.dia" -c "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/InitShader.cpp" -o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/InitShader.o"36"5A1788EF-9585-4BD3-A048-1F0AD7A0E98E-
-
-CCompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Main.o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Main.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s383000037.474223
-e383000039.156941
-r1
-xCompileC
-xIntermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Main.o
-x/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Main.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Main.cppdd9979e51dd4b641^5e2c28e71dd4b641^---0#0#0#-19%DVTDocumentLocation2@94"file://localhost/Users/jafarb/Google%20Drive/github/cs5400_graphics_final_proj/cs5400/Main.cpp0000000000000000^2965"CompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Main.o cs5400/Main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-generated-files.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-own-target-headers.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-all-target-headers.hmap" -iquote "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-project-headers.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/DerivedSources/x86_64" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/DerivedSources" "-F/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug" -MMD -MT dependencies -MF "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Main.d" --serialize-diagnostics "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Main.dia" -c "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Main.cpp" -o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Main.o"36"F2F17B67-0831-4081-A08D-93DB023AF6BD-
-
-CCompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/PlyReader.o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/PlyReader.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s383000038.470813
-e383000039.484283
-r1
-xCompileC
-xIntermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/PlyReader.o
-x/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/PlyReader.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/PlyReader.cpp5cac78e61dd4b641^48537de71dd4b641^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/jafarb/Google%20Drive/github/cs5400_graphics_final_proj/cs5400/PlyReader.cpp0000000000000000^2995"CompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/PlyReader.o cs5400/PlyReader.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-generated-files.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-own-target-headers.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-all-target-headers.hmap" -iquote "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-project-headers.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/DerivedSources/x86_64" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/DerivedSources" "-F/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug" -MMD -MT dependencies -MF "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/PlyReader.d" --serialize-diagnostics "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/PlyReader.dia" -c "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/PlyReader.cpp" -o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/PlyReader.o"36"186A1160-A25D-499B-839C-F4B094EB8E2D-
-
-CCompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Program.o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Program.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s383000039.158392
-e383000040.035518
-r1
-xCompileC
-xIntermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Program.o
-x/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Program.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Program.cppafb028e71dd4b641^ec1609e81dd4b641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/jafarb/Google%20Drive/github/cs5400_graphics_final_proj/cs5400/Program.cpp0000000000000000^2983"CompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Program.o cs5400/Program.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-generated-files.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-own-target-headers.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-all-target-headers.hmap" -iquote "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-project-headers.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/DerivedSources/x86_64" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/DerivedSources" "-F/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug" -MMD -MT dependencies -MF "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Program.d" --serialize-diagnostics "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Program.dia" -c "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Program.cpp" -o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Program.o"36"4647C130-3A6C-4276-B9C9-11F36032B2B7-
-
-CCompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Shader.o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Shader.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s383000039.490216
-e383000040.397953
-r1
-xCompileC
-xIntermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Shader.o
-x/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Shader.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Shader.cpp8e077fe71dd4b641^50e065e81dd4b641^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/jafarb/Google%20Drive/github/cs5400_graphics_final_proj/cs5400/Shader.cpp0000000000000000^2977"CompileC Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Shader.o cs5400/Shader.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=gnu++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-generated-files.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-own-target-headers.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-all-target-headers.hmap" -iquote "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/cs5400-project-headers.hmap" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug/include" -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/DerivedSources/x86_64" "-I/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/DerivedSources" "-F/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug" -MMD -MT dependencies -MF "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Shader.d" --serialize-diagnostics "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Shader.dia" -c "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/cs5400/Shader.cpp" -o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/Shader.o"36"F6972940-FC60-4914-8FEB-19DB92C3FCB0-
-
-CLd "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug/cs5400" normal x86_64
-s383000040.405844
-e383000040.831096
-r1
-xLd
-x/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug/cs5400
-xnormal
-xx86_64
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Link /Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug/cs5400bdff67e81dd4b641^4cc3d4e81dd4b641^---0#0#0#--753"Ld Products/Debug/cs5400 normal x86_64    cd "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj"    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 "-L/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug" "-F/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug" -filelist "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Intermediates/cs5400.build/Debug/cs5400.build/Objects-normal/x86_64/cs5400.LinkFileList" -mmacosx-version-min=10.7 -stdlib=libc++ -lGLEW -framework OpenGL -framework GLUT -o "/Users/jafarb/Google Drive/github/cs5400_graphics_final_proj/Products/Debug/cs5400"36"F6869434-1B3E-45F0-9BF4-DBF7A4B24EC1-
-
