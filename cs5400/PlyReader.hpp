@@ -2,11 +2,15 @@
 #define PLY_READER_X86
 
 #include <GL/glew.h>
+#ifdef __APPLE__
 #include <GLUT/glut.h>
-#include<string>
-#include<fstream>
-#include<vector>
-#include<stdexcept>
+#else
+#include <GL/freeglut.h>
+#endif  // __APPLE__
+#include <string>
+#include <fstream>
+#include <vector>
+#include <stdexcept>
 
 
 class PlyOpener

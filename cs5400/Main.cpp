@@ -1,10 +1,18 @@
 #include "Angel.h"
-#include<string>
-#include<fstream>
-#include<vector>
-#include<stdexcept>
+#include <string>
+#include <fstream>
+#include <vector>
+#include <stdexcept>
 #include <iostream>
-#include<memory>
+#include <memory>
+
+#ifndef CS5400_FILE_PATH
+    #ifdef __APPLE__  
+        #define CS5400_FILE_PATH std::string("../../cs5400/")
+    #else
+        #define CS5400_FILE_PATH std::string("")
+    #endif  // __APPLE__
+#endif  // CS5400_FILE_PATH
 
 #include "Shader.hpp"
 #include "Program.hpp"
@@ -255,9 +263,9 @@ reshape( int width, int height )
 int main(int argv, char **argc)
 {
 	std::vector<std::string> fileNames;
-	fileNames.push_back("../../cs5400/bun_zipper.ply");
-	fileNames.push_back("../../cs5400/dragon_vrip.ply");
-	fileNames.push_back("../../cs5400/happy_vrip.ply");
+	fileNames.push_back(CS5400_FILE_PATH + "bun_zipper.ply");
+	fileNames.push_back(CS5400_FILE_PATH + "dragon_vrip.ply");
+	fileNames.push_back(CS5400_FILE_PATH + "happy_vrip.ply");
 
 	for(int i = 0; i < fileNames.size(); i++)
 	{
@@ -282,11 +290,11 @@ int main(int argv, char **argc)
 	}
 
 	 try
-	{  
+	{
     program = cs5400::make_program
       (
-	cs5400::make_vertexShader("../../cs5400/vshader36.glsl")
-      ,cs5400::make_fragmentShader("../../cs5400/fshader36.glsl")   
+	cs5400::make_vertexShader(CS5400_FILE_PATH + "vshader36.glsl")
+      ,cs5400::make_fragmentShader(CS5400_FILE_PATH + "fshader36.glsl")   
       );
 	init_resources();
     glutDisplayFunc(display);
