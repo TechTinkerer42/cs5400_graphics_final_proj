@@ -29,6 +29,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0CDA93CF16D547B0000A6C34 /* fflattenshader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fflattenshader.glsl; sourceTree = "<group>"; };
+		0CDA93D016D547B0000A6C34 /* fshader1.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fshader1.glsl; sourceTree = "<group>"; };
+		0CDA93D116D547B0000A6C34 /* shader1.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = shader1.glsl; sourceTree = "<group>"; };
+		0CDA93D216D547B0000A6C34 /* vflattenshader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vflattenshader.glsl; sourceTree = "<group>"; };
 		0CE9BAC516D48956000AC491 /* Angel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Angel.h; sourceTree = "<group>"; };
 		0CE9BAC616D48956000AC491 /* bun_zipper_res4.ply */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bun_zipper_res4.ply; sourceTree = "<group>"; };
 		0CE9BAC716D48956000AC491 /* bun_zipper.ply */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bun_zipper.ply; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				0CE9BACC16D48956000AC491 /* fshaderGranite.glsl */,
 				0CE9BACD16D48956000AC491 /* fshaderOther.glsl */,
 				0CE9BACE16D48956000AC491 /* fshaderToon.glsl */,
+				0CDA93CF16D547B0000A6C34 /* fflattenshader.glsl */,
+				0CDA93D016D547B0000A6C34 /* fshader1.glsl */,
 				0CE9BACF16D48956000AC491 /* happy_vrip_res4.ply */,
 				0CE9BAD016D48956000AC491 /* happy_vrip.ply */,
 				0CE9BAD116D48956000AC491 /* InitShader.cpp */,
@@ -100,6 +106,8 @@
 				0CE9BADA16D48956000AC491 /* vshaderGranite.glsl */,
 				0CE9BADB16D48956000AC491 /* vshaderOther.glsl */,
 				0CE9BADC16D48956000AC491 /* vshaderToon.glsl */,
+				0CDA93D216D547B0000A6C34 /* vflattenshader.glsl */,
+				0CDA93D116D547B0000A6C34 /* shader1.glsl */,
 			);
 			path = CS5400Assign2;
 			sourceTree = "<group>";

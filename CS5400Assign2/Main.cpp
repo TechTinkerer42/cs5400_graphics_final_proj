@@ -235,26 +235,38 @@ void keyboard( unsigned char key, int x, int y )
 	case '.':
 		if(modelNumber < totalModels - 1)
 			modelNumber++;
+		else
+			modelNumber = 0;
 		break;
 	case ',':
 		if(modelNumber > 0)
-		modelNumber--;
+            modelNumber--;
+		else
+			modelNumber = totalModels - 1;
 		break;
     case '=':
         if(programNumber < totalPrograms - 1)
             programNumber++;
+		else
+			programNumber = 0;
         break;
     case '-':
         if(programNumber > 0)
             programNumber--;
+		else
+			programNumber = totalPrograms - 1;
         break;
     case ']':
         if(materialNumber < totalMaterials - 1)
             materialNumber++;
+		else
+			materialNumber = 0;
         break;
     case '[':
         if(materialNumber > 0)
             materialNumber--;
+		else
+			materialNumber = totalMaterials - 1;
         break;
     case 'p':
         pause = !pause;
@@ -321,6 +333,14 @@ int main(int argv, char **argc)
     materials.push_back(Material(vec4(0.8, 0.3, 0.5, 1.0), vec4( 1.0, 0.8, 0.0, 1.0 ), vec4( 0.32, 0.16, 0.0, 1.0 ), 5.0));
     materials.push_back(Material(vec4(0.2, 0.1, 0.0, 1.0), vec4( 0.4, 0.2, 0.0, 1.0 ), vec4( 1.0, 1.0, 0.5, 1.0 ), 10));
     materials.push_back(Material(vec4(0.2, 0.3, 0.3, 1.0), vec4( 0.8, 0.8, 0.8, 1.0 ), vec4( 0.3, 0.3, 0.3, 1.0 ), 1));
+    materials.push_back(Material(vec4(0.24725, 0.1995, 0.0745, 1.0), vec4( 0.75164, 0.60648, 0.22648, 1.0 ), vec4( .628281, 0.555802, 0.366065, 1.0 ), 1));
+	materials.push_back(Material(vec4(0.0, 0.05, 0.0, .781), vec4( 0.4, 0.5, 0.4, 1.0 ), vec4( 0.4, 0.7, 0.4, .78125 ), 5));
+    materials.push_back(Material(vec4(0.0, 0.0, 0.0, .75), vec4( 0.01, 0.01, 0.01, .25 ), vec4( 0.5, 0.5, 0.5, .25 ), 1));
+	materials.push_back(Material(vec4(0.1745, 0.01175, 0.01175, 1.0), vec4(0.61424, 0.04136, 0.04136, 1.0), vec4(0.727811, 0.626959, 0.626959, .75), 4));
+	materials.push_back(Material(vec4(.0215, .1745, .0215, .8),vec4(.07568, .61424, .07568, 1.0), vec4(.633, .727811, .633, .6), 3));
+	materials.push_back(Material(vec4(.1925, .19225, .19225, 1.0),vec4(.50754, .50754, .50754, 1.0), vec4(.508273, .508273, .508273, .4), 5));
+	materials.push_back(Material(vec4(.05, .05, .0, .58), vec4(.5, .5, .4, 1.0), vec4(.7, .7, .04, .078125), 10));
+
     
     totalMaterials = (GLint)materials.size();
     
@@ -359,6 +379,16 @@ int main(int argv, char **argc)
       (
        cs5400::make_vertexShader(CS5400_FILE_PATH + "vshaderOther.glsl")
        ,cs5400::make_fragmentShader(CS5400_FILE_PATH + "fshaderOther.glsl")
+       ));
+    program.push_back(cs5400::make_program
+      (
+       cs5400::make_vertexShader(CS5400_FILE_PATH + "vflattenshader.glsl")
+       ,cs5400::make_fragmentShader(CS5400_FILE_PATH + "fflattenshader.glsl")
+       ));
+    program.push_back(cs5400::make_program
+      (
+       cs5400::make_vertexShader(CS5400_FILE_PATH + "shader1.glsl")
+       ,cs5400::make_fragmentShader(CS5400_FILE_PATH + "fshader1.glsl")
        ));
         
         
@@ -409,7 +439,6 @@ void init_resources()
 	//glEnable(GL_LIGHTING); glEnable(GL_LIGHT0);
 	glShadeModel(GL_FLAT);
 	glEnable(GL_DEPTH_TEST);
-
 	
 }
 
