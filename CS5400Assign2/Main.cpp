@@ -8,7 +8,7 @@
 
 #ifndef CS5400_FILE_PATH
     #ifdef __APPLE__  
-        #define CS5400_FILE_PATH std::string("../../cs5400/")
+        #define CS5400_FILE_PATH std::string("../../CS5400Assign2/")
     #else
         #define CS5400_FILE_PATH std::string("")
     #endif  // __APPLE__
