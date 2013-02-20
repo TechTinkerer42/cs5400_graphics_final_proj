@@ -31,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0CB5B8AB16D44E2E003794AB /* fshaderToon.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fshaderToon.glsl; sourceTree = "<group>"; };
+		0CB5B8AC16D44E2E003794AB /* vshaderToon.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vshaderToon.glsl; sourceTree = "<group>"; };
 		0ED2357316D4018A003E6570 /* cs5400 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cs5400; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED2357816D4018A003E6570 /* cs5400.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = cs5400.1; sourceTree = "<group>"; };
 		0ED2357F16D401D1003E6570 /* Angel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Angel.h; sourceTree = "<group>"; };
@@ -99,6 +101,9 @@
 				0ED236F216D401D4003E6570 /* dragon_vrip_res4.ply */,
 				0ED236F316D401D4003E6570 /* dragon_vrip.ply */,
 				0ED236F416D401D4003E6570 /* fshader36.glsl */,
+				0ED2370516D401D4003E6570 /* vshader36.glsl */,
+				0CB5B8AB16D44E2E003794AB /* fshaderToon.glsl */,
+				0CB5B8AC16D44E2E003794AB /* vshaderToon.glsl */,
 				0ED236F816D401D4003E6570 /* happy_vrip_res4.ply */,
 				0ED236F916D401D4003E6570 /* happy_vrip.ply */,
 				0ED236FA16D401D4003E6570 /* InitShader.cpp */,
@@ -109,7 +114,6 @@
 				0ED2370216D401D4003E6570 /* Shader.cpp */,
 				0ED2370316D401D4003E6570 /* Shader.hpp */,
 				0ED2370416D401D4003E6570 /* vec.h */,
-				0ED2370516D401D4003E6570 /* vshader36.glsl */,
 				0ED2357816D4018A003E6570 /* cs5400.1 */,
 			);
 			path = cs5400;

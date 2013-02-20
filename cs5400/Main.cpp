@@ -276,8 +276,8 @@ int main(int argv, char **argc)
 {
 	std::vector<std::string> fileNames;
 	fileNames.push_back(CS5400_FILE_PATH + "bun_zipper.ply");
-	fileNames.push_back(CS5400_FILE_PATH + "dragon_vrip.ply");
-	fileNames.push_back(CS5400_FILE_PATH + "happy_vrip.ply");
+//	fileNames.push_back(CS5400_FILE_PATH + "dragon_vrip.ply");
+//	fileNames.push_back(CS5400_FILE_PATH + "happy_vrip.ply");
 
 	for(int i = 0; i < fileNames.size(); i++)
 	{
