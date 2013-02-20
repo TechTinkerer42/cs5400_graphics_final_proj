@@ -7,10 +7,6 @@ uniform vec4 AmbientProduct, DiffuseProduct, SpecularProduct;
 uniform vec4 LightPosition;
 uniform float Shininess;
 
-uniform float xColor;
-uniform float yColor;
-uniform float zColor;
-
 uniform mat4 ModelView;
 uniform mat4 Projection;
 
@@ -42,10 +38,6 @@ void main()
 
 	
 	color = diffuse + specular + ambient;
-	
-	//color =
-       //vec4( ( vPosition.x * vNormal.x * xColor ), (vPosition.y * vNormal.y * yColor ),
-              //( vPosition.z * vNormal.z * zColor), 0.0 );
 	
     color.a = 1.0;
     

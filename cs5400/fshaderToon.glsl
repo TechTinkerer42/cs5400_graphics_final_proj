@@ -18,7 +18,7 @@ void main()
 
     float val = dot(normalize(varyingNormalDirection * varyingNormalDirection), vec3(0,0,1));
 
-    if(val < .5 && val > -.5)
+    if(val < .6 && val > -.6)
     {
         gl_FragColor = color * vec4(0,0,0,0);
     }

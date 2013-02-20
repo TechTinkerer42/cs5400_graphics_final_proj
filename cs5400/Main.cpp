@@ -28,15 +28,29 @@
 GLfloat  fov = 60, aspect = 1;
 GLfloat  zNear = 0.1, zFar = 30.0;
 
-GLuint level = 0;
-
 std::vector<std::vector<GLfloat>> modelPoints;
 std::vector<std::vector<GLfloat>> modelNormals;
 std::vector<std::vector<GLuint>> modelFaces;
 std::vector<GLuint> plyEle;
 std::vector<GLuint> plyPoints;
 
+
+GLuint modelNumber = 0;
+GLuint programNumber = 0;
+GLuint materialNumber = 0;
+
 GLuint totalModels = 0;
+GLuint totalPrograms = 0;
+GLuint totalMaterials = 0;
+
+struct Material {
+    Material(vec4 a, vec4 d, vec4 s, float r):ambient(a),diffuse(d),specular(s),shininess(r)
+    {}
+    vec4 ambient;
+    vec4 diffuse;
+    vec4 specular;
+    float shininess;
+};
 
 struct point
 {
@@ -85,7 +99,8 @@ GLuint vPosition;
 GLuint vNormal;
 GLuint ply_ele;
 GLuint ply_points;
-std::shared_ptr<cs5400::Program> program;
+std::vector<std::shared_ptr<cs5400::Program>> program;
+std::vector<Material> materials;
 
 
 enum { Xaxis = 0, Yaxis = 1, Zaxis = 2, NumAxes = 3 };
@@ -218,13 +233,29 @@ void keyboard( unsigned char key, int x, int y )
 		zCol -= TRANSLATION_INCREMENT*10;
 		break;
 	case '.':
-		if(level < totalModels - 1)
-			level++;
+		if(modelNumber < totalModels - 1)
+			modelNumber++;
 		break;
 	case ',':
-		if(level > 0)
-		level--;
+		if(modelNumber > 0)
+		modelNumber--;
 		break;
+    case '=':
+        if(programNumber < totalPrograms - 1)
+            programNumber++;
+        break;
+    case '-':
+        if(programNumber > 0)
+            programNumber--;
+        break;
+    case ']':
+        if(materialNumber < totalMaterials - 1)
+            materialNumber++;
+        break;
+    case '[':
+        if(materialNumber > 0)
+            materialNumber--;
+        break;
     case 'p':
         pause = !pause;
         break;
@@ -276,8 +307,8 @@ int main(int argv, char **argc)
 {
 	std::vector<std::string> fileNames;
 	fileNames.push_back(CS5400_FILE_PATH + "bun_zipper.ply");
-//	fileNames.push_back(CS5400_FILE_PATH + "dragon_vrip.ply");
-//	fileNames.push_back(CS5400_FILE_PATH + "happy_vrip.ply");
+	fileNames.push_back(CS5400_FILE_PATH + "dragon_vrip.ply");
+	fileNames.push_back(CS5400_FILE_PATH + "happy_vrip.ply");
 
 	for(int i = 0; i < fileNames.size(); i++)
 	{
@@ -287,6 +318,12 @@ int main(int argv, char **argc)
 	}
 	
 	
+    materials.push_back(Material(vec4(0.8, 0.3, 0.5, 1.0), vec4( 1.0, 0.8, 0.0, 1.0 ), vec4( 0.32, 0.16, 0.0, 1.0 ), 5.0));
+    materials.push_back(Material(vec4(0.2, 0.1, 0.0, 1.0), vec4( 0.4, 0.2, 0.0, 1.0 ), vec4( 1.0, 1.0, 0.5, 1.0 ), 10));
+    materials.push_back(Material(vec4(0.2, 0.3, 0.3, 1.0), vec4( 0.8, 0.8, 0.8, 1.0 ), vec4( 0.3, 0.3, 0.3, 1.0 ), 1));
+    
+    totalMaterials = (GLint)materials.size();
+    
 
 	glutInit(&argv, argc);
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE);
@@ -303,11 +340,30 @@ int main(int argv, char **argc)
 
 	 try
 	{
-    program = cs5400::make_program
+    program.push_back(cs5400::make_program
       (
 	cs5400::make_vertexShader(CS5400_FILE_PATH + "vshader36.glsl")
       ,cs5400::make_fragmentShader(CS5400_FILE_PATH + "fshader36.glsl")   
-      );
+      ));
+    program.push_back(cs5400::make_program
+      (
+       cs5400::make_vertexShader(CS5400_FILE_PATH + "vshaderToon.glsl")
+       ,cs5400::make_fragmentShader(CS5400_FILE_PATH + "fshaderToon.glsl")
+       ));
+    program.push_back(cs5400::make_program
+      (
+       cs5400::make_vertexShader(CS5400_FILE_PATH + "vshaderGranite.glsl")
+       ,cs5400::make_fragmentShader(CS5400_FILE_PATH + "fshaderGranite.glsl")
+       ));
+    program.push_back(cs5400::make_program
+      (
+       cs5400::make_vertexShader(CS5400_FILE_PATH + "vshaderOther.glsl")
+       ,cs5400::make_fragmentShader(CS5400_FILE_PATH + "fshaderOther.glsl")
+       ));
+        
+        
+    totalPrograms = (GLint)program.size();
+        
 	init_resources();
     glutDisplayFunc(display);
 	glutKeyboardFunc( keyboard );
@@ -349,12 +405,6 @@ void init_resources()
 
 		plyEle.push_back(ply_ele);
 	}
-
-		 
-    // Retrieve transformation uniform variable locations
-    ModelView = glGetUniformLocation( program->getHandle(), "ModelView" );
-    Projection = glGetUniformLocation( program->getHandle(), "Projection" );
-
 	
 	//glEnable(GL_LIGHTING); glEnable(GL_LIGHT0);
 	glShadeModel(GL_FLAT);
@@ -365,31 +415,26 @@ void init_resources()
 
 void lightingParams()
 {
-	vec4 light_position( xCol + xSwing, yCol, 1 + zCol, 0.0 );
-    vec4 light_ambient( 0.8, 1.0, 0.5, 1.0 );
-    vec4 light_diffuse( 1.0, 1.0, 1.0, 1.0 );
-    vec4 light_specular( 0.8, 0.2, 0.0, 1.0 );
+	vec4 light_position( xCol + xSwing, yCol, 1 + zCol, 1);
+    vec4 light_color( 1.0, 1.0, 1.0, 1.0 );
 
-    vec4 material_ambient( 1.0, 0.3, 1.0, 1.0 );
-    vec4 material_diffuse( 1.0, 0.8, 0.0, 1.0 );
-    vec4 material_specular( 0.4, 0.8, 0.0, 1.0 );
-    float  material_shininess = 5.0;
+    vec4 ambient_product = light_color * materials[materialNumber].ambient;
+    vec4 diffuse_product = light_color * materials[materialNumber].diffuse;
+    vec4 specular_product = light_color * materials[materialNumber].specular;
+    
+    float  material_shininess = materials[materialNumber].shininess;
 
-    vec4 ambient_product = light_ambient * material_ambient;
-    vec4 diffuse_product = light_diffuse * material_diffuse;
-    vec4 specular_product = light_specular * material_specular;
-
-	glUniform4fv( glGetUniformLocation(program->getHandle(), "AmbientProduct"),
+	glUniform4fv( glGetUniformLocation(program[programNumber]->getHandle(), "AmbientProduct"),
 		  1, ambient_product );
-    glUniform4fv( glGetUniformLocation(program->getHandle(), "DiffuseProduct"),
+    glUniform4fv( glGetUniformLocation(program[programNumber]->getHandle(), "DiffuseProduct"),
 		  1, diffuse_product );
-    glUniform4fv( glGetUniformLocation(program->getHandle(), "SpecularProduct"),
+    glUniform4fv( glGetUniformLocation(program[programNumber]->getHandle(), "SpecularProduct"),
 		  1, specular_product );
-	
-    glUniform4fv( glGetUniformLocation(program->getHandle(), "LightPosition"),
+
+    glUniform4fv( glGetUniformLocation(program[programNumber]->getHandle(), "LightPosition"),
 		  1, light_position );
 
-    glUniform1f( glGetUniformLocation(program->getHandle(), "Shininess"),
+    glUniform1f( glGetUniformLocation(program[programNumber]->getHandle(), "Shininess"),
 		 material_shininess );
 }
 
@@ -403,7 +448,7 @@ void display()
 	lightingParams();
 
 	
-    glUseProgram(program->getHandle());
+    glUseProgram(program[programNumber]->getHandle());
 
 	vec4  at(Trans[0], Trans[1], Trans[2]-1, 1.0 );
     vec4    up( 0.0, 1.0, 0.0, 0.0 );
@@ -416,17 +461,21 @@ void display()
 						 RotateZ( Theta[Zaxis] ) *
 						 Scale(ScaleVal, ScaleVal, ScaleVal));
     
+    // Retrieve transformation uniform variable locations
+    ModelView = glGetUniformLocation( program[programNumber]->getHandle(), "ModelView" );
+    Projection = glGetUniformLocation( program[programNumber]->getHandle(), "Projection" );
+    
     glUniformMatrix4fv( ModelView, 1, GL_TRUE, model_view );
 
 	mat4  p = Perspective(fov, aspect, zNear, zFar);
     glUniformMatrix4fv( Projection, 1, GL_TRUE, p );
 
 
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, plyEle[level]);
-	glBindBuffer(GL_ARRAY_BUFFER, plyPoints[level]);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, plyEle[modelNumber]);
+	glBindBuffer(GL_ARRAY_BUFFER, plyPoints[modelNumber]);
 
-	vPosition = glGetAttribLocation( program->getHandle(), "vPosition" );
-	vNormal = glGetAttribLocation(program->getHandle(), "vNormal");
+	vPosition = glGetAttribLocation( program[programNumber]->getHandle(), "vPosition" );
+	vNormal = glGetAttribLocation(program[programNumber]->getHandle(), "vNormal");
 	glEnableVertexAttribArray(vPosition);
 	glEnableVertexAttribArray(vNormal);
 
@@ -445,10 +494,10 @@ void display()
 		GL_FLOAT,
 		GL_FALSE,
 		0,
-		BUFFER_OFFSET(modelPoints[level].size() * sizeof(GLfloat))
+		BUFFER_OFFSET(modelPoints[modelNumber].size() * sizeof(GLfloat))
 		);
 
-	glDrawElements(GL_TRIANGLES, (GLsizei)modelFaces[level].size(), GL_UNSIGNED_INT,0);
+	glDrawElements(GL_TRIANGLES, (GLsizei)modelFaces[modelNumber].size(), GL_UNSIGNED_INT,0);
 
 	glDisableVertexAttribArray(vPosition);
 	glDisableVertexAttribArray(vNormal);
@@ -461,7 +510,7 @@ void display()
 
 void free_resources()
 {
-	glDeleteProgram(program->getHandle());
+	glDeleteProgram(program[programNumber]->getHandle());
 }
 
 

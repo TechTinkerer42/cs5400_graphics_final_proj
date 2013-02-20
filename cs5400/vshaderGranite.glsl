@@ -10,7 +10,12 @@ uniform float Shininess;
 uniform mat4 ModelView;
 uniform mat4 Projection;
 
-varying vec3 varyingNormalDirection;
+//rand function from http://www.ozone3d.net/blogs/lab/20110427/glsl-random-generator/
+float rand(vec2 n)
+{
+  return 0.4 + 0.3 * 
+     fract(sin(dot(n.xy, vec2(12.9898, 78.233)))* 43758.5453);
+}
 
 void main() 
 {
@@ -35,13 +40,13 @@ void main()
     vec4  specular = Ks * SpecularProduct;
     
     if( dot(L, N) < 0.0 ) {
-        specular = vec4(0.0, 0.0, 0.0, 1.0);
+	specular = vec4(0.0, 0.0, 0.0, 1.0);
     } 
 
 	
 	color = diffuse + specular + ambient;
-  
-    varyingNormalDirection = vec3(normalize(ModelView * vec4(vNormal,0)));
+	
+    color = color * vec4(rand(vPosition.xz),rand(vPosition.xz),rand(vPosition.xz),0);
 
     color.a = 1.0;
     

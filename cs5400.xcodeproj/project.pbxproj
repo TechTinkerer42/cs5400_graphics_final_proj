@@ -31,6 +31,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C746C6116D482E100C08800 /* fshaderGranite.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fshaderGranite.glsl; sourceTree = "<group>"; };
+		0C746C6216D482E100C08800 /* vshaderGranite.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vshaderGranite.glsl; sourceTree = "<group>"; };
+		0C85F14016D46B2F006356DC /* fshaderOther.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fshaderOther.glsl; sourceTree = "<group>"; };
+		0C85F14116D46B2F006356DC /* vshaderOther.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vshaderOther.glsl; sourceTree = "<group>"; };
 		0CB5B8AB16D44E2E003794AB /* fshaderToon.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fshaderToon.glsl; sourceTree = "<group>"; };
 		0CB5B8AC16D44E2E003794AB /* vshaderToon.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vshaderToon.glsl; sourceTree = "<group>"; };
 		0ED2357316D4018A003E6570 /* cs5400 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cs5400; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,10 @@
 				0ED2370516D401D4003E6570 /* vshader36.glsl */,
 				0CB5B8AB16D44E2E003794AB /* fshaderToon.glsl */,
 				0CB5B8AC16D44E2E003794AB /* vshaderToon.glsl */,
+				0C85F14016D46B2F006356DC /* fshaderOther.glsl */,
+				0C85F14116D46B2F006356DC /* vshaderOther.glsl */,
+				0C746C6116D482E100C08800 /* fshaderGranite.glsl */,
+				0C746C6216D482E100C08800 /* vshaderGranite.glsl */,
 				0ED236F816D401D4003E6570 /* happy_vrip_res4.ply */,
 				0ED236F916D401D4003E6570 /* happy_vrip.ply */,
 				0ED236FA16D401D4003E6570 /* InitShader.cpp */,

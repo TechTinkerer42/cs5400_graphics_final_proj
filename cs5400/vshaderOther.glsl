@@ -10,7 +10,6 @@ uniform float Shininess;
 uniform mat4 ModelView;
 uniform mat4 Projection;
 
-varying vec3 varyingNormalDirection;
 
 void main() 
 {
@@ -39,9 +38,7 @@ void main()
     } 
 
 	
-	color = diffuse + specular + ambient;
-  
-    varyingNormalDirection = vec3(normalize(ModelView * vec4(vNormal,0)));
+	color = (diffuse + specular + ambient) * normalize(ModelView * vec4(vNormal, 0));
 
     color.a = 1.0;
     
