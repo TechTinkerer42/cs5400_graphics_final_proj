@@ -20,7 +20,7 @@ void main()
 
     if(val < .6 && val > -.6)
     {
-        gl_FragColor = color * vec4(0,0,0,0);
+        gl_FragColor = vec4(0,0,0,0);
     }
     else
     {

@@ -10,14 +10,15 @@ uniform float Shininess;
 uniform mat4 ModelView;
 uniform mat4 Projection;
 
+varying vec3 varyingNormalDirection;
+
 void main() 
 {
 
 	 // Transform vertex  position into eye coordinates
     vec3 pos = (ModelView * vec4(vPosition, 0.0)).xyz;
 	
-	
-    vec3 L = normalize( LightPosition.xyz - pos  );
+    vec3 L = normalize( LightPosition.xyz - pos );
     vec3 E = normalize( -pos );
     vec3 H = normalize( L + E );
 
@@ -34,15 +35,15 @@ void main()
     vec4  specular = Ks * SpecularProduct;
     
     if( dot(L, N) < 0.0 ) {
-	specular = vec4(0.0, 0.0, 0.0, 1.0);
+        specular = vec4(0.0, 0.0, 0.0, 1.0);
     } 
 
 	
 	color = diffuse + specular + ambient;
-	
-    color.a = 1.0;
-	
-    gl_Position = Projection * ModelView * vec4(vPosition.xy, vPosition.z*.001, 1.0);
-	
+  
+    varyingNormalDirection = vec3(normalize(ModelView * vec4(vNormal,0)));
 
+    color.a = 1.0;
+    
+    gl_Position = Projection * ModelView  * vec4(vPosition, 1.0);
 } 

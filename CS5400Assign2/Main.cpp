@@ -333,6 +333,7 @@ int main(int argv, char **argc)
     materials.push_back(Material(vec4(0.8, 0.3, 0.5, 1.0), vec4( 1.0, 0.8, 0.0, 1.0 ), vec4( 0.32, 0.16, 0.0, 1.0 ), 5.0));
     materials.push_back(Material(vec4(0.2, 0.1, 0.0, 1.0), vec4( 0.4, 0.2, 0.0, 1.0 ), vec4( 1.0, 1.0, 0.5, 1.0 ), 10));
     materials.push_back(Material(vec4(0.2, 0.3, 0.3, 1.0), vec4( 0.8, 0.8, 0.8, 1.0 ), vec4( 0.3, 0.3, 0.3, 1.0 ), 1));
+    materials.push_back(Material(vec4(0.0, 0.0, 0.3, 1.0), vec4( 0.0, 0.8, 0.2, 1.0 ), vec4( 1, 0.0, 0.0, 1.0 ), 2));
     materials.push_back(Material(vec4(0.24725, 0.1995, 0.0745, 1.0), vec4( 0.75164, 0.60648, 0.22648, 1.0 ), vec4( .628281, 0.555802, 0.366065, 1.0 ), 1));
 	materials.push_back(Material(vec4(0.0, 0.05, 0.0, .781), vec4( 0.4, 0.5, 0.4, 1.0 ), vec4( 0.4, 0.7, 0.4, .78125 ), 5));
     materials.push_back(Material(vec4(0.0, 0.0, 0.0, .75), vec4( 0.01, 0.01, 0.01, .25 ), vec4( 0.5, 0.5, 0.5, .25 ), 1));
@@ -390,6 +391,12 @@ int main(int argv, char **argc)
        cs5400::make_vertexShader(CS5400_FILE_PATH + "shader1.glsl")
        ,cs5400::make_fragmentShader(CS5400_FILE_PATH + "fshader1.glsl")
        ));
+    program.push_back(cs5400::make_program
+      (
+       cs5400::make_vertexShader(CS5400_FILE_PATH + "vshaderAnother.glsl")
+       ,cs5400::make_fragmentShader(CS5400_FILE_PATH + "fshaderAnother.glsl")
+       ));
+
         
         
     totalPrograms = (GLint)program.size();

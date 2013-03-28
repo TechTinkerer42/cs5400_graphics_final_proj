@@ -29,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C76C51416D5D699003CBB87 /* fshaderAnother.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fshaderAnother.glsl; sourceTree = "<group>"; };
+		0C76C51516D5D699003CBB87 /* vshaderAnother.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = vshaderAnother.glsl; sourceTree = "<group>"; };
 		0CDA93CF16D547B0000A6C34 /* fflattenshader.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fflattenshader.glsl; sourceTree = "<group>"; };
 		0CDA93D016D547B0000A6C34 /* fshader1.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = fshader1.glsl; sourceTree = "<group>"; };
 		0CDA93D116D547B0000A6C34 /* shader1.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = shader1.glsl; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 				0CE9BACF16D48956000AC491 /* happy_vrip_res4.ply */,
 				0CE9BAD016D48956000AC491 /* happy_vrip.ply */,
 				0CE9BAD116D48956000AC491 /* InitShader.cpp */,
+				0C76C51416D5D699003CBB87 /* fshaderAnother.glsl */,
+				0C76C51516D5D699003CBB87 /* vshaderAnother.glsl */,
 				0CE9BAD216D48956000AC491 /* Main.cpp */,
 				0CE9BAD316D48956000AC491 /* mat.h */,
 				0CE9BAD416D48956000AC491 /* Program.cpp */,
